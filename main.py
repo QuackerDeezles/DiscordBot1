@@ -50,4 +50,4 @@ async def eball(ctx, *, question):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
-client.run('NzY3MTkwNzIxNTM0MzYxNjMx.X4uUCQ.uEA7b-jd2LAGvXDXIikoM3TWmXQ')
+client.run('key')
