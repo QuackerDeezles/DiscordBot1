@@ -6,8 +6,27 @@ client = commands.Bot(command_prefix = ';')
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Subscribe to QuackerDeezles'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game("I wish someone nitro boosts 60hz gang"))
     print('Bot is ready.')
+
+@client.command("say")
+@commands.has_permissions(mention_everyone=True)
+async def say(ctx, *, message):
+    await ctx.message.delete()
+    await ctx.send(f'bruh you')
+
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.message.delete()
+    await ctx.channel.purge(limit=amount)
+
+@client.command()
+async def timebombserver(ctx):
+    await ctx.send(f'https://discord.gg/DB3eCX8RRR')
+
+@client.command()
+async def moonfrost(ctx):
+    await ctx.send(f'https://twitch.tv/moonfrostelemental | https://www.youtube.com/channel/UCxW9ilAhTGuhLvzIhgmSvyw?view_as=subscriber')
 
 @client.event
 async def on_member_join(member):
@@ -45,7 +64,27 @@ async def eball(ctx, *, question):
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
 @client.command()
-async def chem(ctx, *, symbol):
+async def peepo(ctx):
+    gifs = ['https://tenor.com/view/peepo-arrive-peepo-pepe-the-frog-happy-gif-16095288',
+            'https://tenor.com/view/pepe-pepe-the-frog-clapping-applause-gif-17906949',
+            'https://tenor.com/view/peepo-smash-pepe-pepe-the-frog-punch-gif-16142453',
+            'https://tenor.com/view/pepe-hype-hands-up-gif-17872512',
+            'https://tenor.com/view/peepo-dance-pepe-cool-gif-15777418',
+            'https://tenor.com/view/petthepeepo-gif-18147335',
+            'https://tenor.com/view/burrito-pass-peepohappy-gif-18706235',
+            'https://tenor.com/view/peepo-wtf-gif-18154652',
+            'https://tenor.com/view/peepo-wiadro-good-morning-gif-18944877']
+    await ctx.send(f'Here is your peepo gif! {random.choice(gifs)}')
+
+@client.command()
+async def poggers(ctx):
+    gifs = ['https://tenor.com/view/pogchamp-pog-pogey-poggers-twitch-gif-14340727',
+            'https://tenor.com/view/pogchamp-shocked-intensified-gif-17946611',
+            'https://tenor.com/view/vsauce-vsauce-pog-poggers-vsauce-poggers-pog-gif-1843037P']
+    await ctx.send(f'Here is your pog/poggers/pogchamp gif! {random.choice(gifs)}')
+
+@client.command()
+async def elem(ctx, *, symbol):
     elements = {
         "H":"Hydrogen, 1st, Mass of 1.008",
         "He":"Helium, 2nd, Mass of 4.0026, Noble Gas",
@@ -69,6 +108,7 @@ async def chem(ctx, *, symbol):
     }
     await ctx.send(f'Symbol: {symbol}\nInformation: {elements[symbol]}')
 
+
 @client.command()
 async def ducc(ctx):
     await ctx.send(f'Hey there fella, I am Quacc Ducc, a bot that does what rarely other bots do. I am currently adding more things to my bot, such as adding the periodic table, and more. I suppose you want a duck emoji, so here it is! :duck:')
@@ -79,18 +119,12 @@ async def youtube(ctx):
 
 @client.command()
 async def website(ctx):
-    await ctx.send(f'The programmers website is here: https://talentkrazy.wixsite.com/website | chWill make a bot website soon!')
+    await ctx.send(f'The programmers website is here: https://talentkrazy.wixsite.com/website | Will make a bot website soon!')
 
 @client.command()
 async def twitch(ctx):
     await ctx.send(f'https://www.twitch.tv/quackerdeezles')
 
-@client.command()
-async def clear(ctx, amount=5):
-    await ctx.channel.purge(limit=amount)
 
-@client.command()
-async def helps(ctx):
-    await ctx.send(f' Commands: ;ping | ;eball | ;chem | ;ducc | ;youtube | ;website | ;twitch | ;clear | ;helps')
 
-client.run('KEY')
+client.run('key')
