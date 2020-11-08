@@ -9,6 +9,7 @@ async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game("I wish someone nitro boosts 60hz gang"))
     print('Bot is ready.')
 
+
 @client.command("say")
 @commands.has_permissions(mention_everyone=True)
 async def say(ctx, *, message):
@@ -26,7 +27,7 @@ async def timebombserver(ctx):
 
 @client.command()
 async def moonfrost(ctx):
-    await ctx.send(f'https://twitch.tv/moonfrostelemental | https://www.youtube.com/channel/UCxW9ilAhTGuhLvzIhgmSvyw?view_as=subscriber')
+    await ctx.send(f'https://twitch.tv/moonfrostelemental | https://www.youtube.com/channel/UCxW9ilAhTGuhLvzIhgmSvyw?view_as=subscriber | https://discord.gg/3BkEHKq')
 
 @client.event
 async def on_member_join(member):
@@ -124,6 +125,48 @@ async def website(ctx):
 @client.command()
 async def twitch(ctx):
     await ctx.send(f'https://www.twitch.tv/quackerdeezles')
+
+@client.command()
+async def xoroll(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=MbuP33ugiPU')
+
+@client.command()
+async def hi(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=a00f_tbdi8I')
+
+@client.command()
+async def sans(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=wDgQdr8ZkTw Megalovania, the #1 undertale song (dev opinion)')
+
+@client.command()
+async def e(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=Qskm9MTz2V4 E')
+
+@client.command()
+async def overused(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=nMbx8EurE0g Remember this? Then ur OG.')
+
+@client.command()
+async def mirotam(ctx):
+    await ctx.send(f'Thank you very much Mirotam for letting me put this bot in this server! | https://discord.gg/gNKEYTg')
+
+@client.command()
+async def stillpesta(ctx):
+    await ctx.send(f'https://tenor.com/view/npesta-stillpesta-gif-18113412 FOR THE KENOS')
+
+@client.command()
+async def pingg(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=RKW6rjnYEkc&list=RDQHVREB6fdvI&index=12 Read the subtitles :)')
+
+@client.command()
+async def leaderboard(ctx):
+    await ctx.send(f'1st Place: c07 - 43 Pts (13)\n2nd Place: Saz - 35 Pts (33)\n3rd Place: Soggy Potato - 33 Pts (11)\n4th Place: T I M E B O M B - 33 Pts\n5th Place: yujiBR - 8 Pts\n6th Place: DynaXiasT - 8 Pts')
+
+@client.command()
+async def botserv(ctx):
+    await ctx.send(f'It would be much appreciated if you check out this server. Right now I am building on it, so it might look dead. But, be sure to come back later and hop in if you need help or to have fun! https://discord.gg/w6ETpwP7kB')
+
+
 
 
 
