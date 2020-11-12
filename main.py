@@ -264,4 +264,4 @@ async def gdleaderboard(ctx):
 async def socbotserv(ctx):
     await ctx.send(f'It would be much appreciated if you check out this server. Right now I am building on it, so it might look dead. But, be sure to come back later and hop in if you need help or to have fun! https://discord.gg/w6ETpwP7kB')
 
-client.run('NzY3MTkwNzIxNTM0MzYxNjMx.X4uUCQ.Ckk2EqHvxS5L0Y1a8Lhw5S1NZMg')
+client.run('key')
