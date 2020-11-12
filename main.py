@@ -6,23 +6,56 @@ client = commands.Bot(command_prefix = ';')
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game("I wish someone nitro boosts 60hz gang"))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game("DM BCC QuackerDeezlesYT#6392 if you want this bot in your server!"))
     print('Bot is ready.')
 
-
-@client.command("say")
-@commands.has_permissions(mention_everyone=True)
-async def say(ctx, *, message):
-    await ctx.message.delete()
-    await ctx.send(f'bruh you')
+@client.command()
+async def creeper(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=cPJUBQd-PNM um u asked for it here it is')
 
 @client.command()
-async def clear(ctx, amount=5):
+async def mineparody(ctx):
+    random_minecraft_parodies = ['https://www.youtube.com/watch?v=cPJUBQd-PNM',
+                                 'https://www.youtube.com/watch?v=5nfv_iEeC8Y',
+                                 'https://www.youtube.com/watch?v=pcWWg0T1RSQ',
+                                 'https://www.youtube.com/watch?v=Gl6ekgobG2k',
+                                 'https://www.youtube.com/watch?v=OIWK3BD5zT8']
+    await ctx.send(f'Here is your random Minecraft parody! {random.choice(random_minecraft_parodies)}')
+
+@client.command()
+async def deletus(ctx, amount=0):
     await ctx.message.delete()
     await ctx.channel.purge(limit=amount)
 
 @client.command()
-async def timebombserver(ctx):
+async def nexuspuk(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=kdTxybWNwL4')
+
+@client.command()
+async def omegalul(ctx):
+    await ctx.send(f'https://tenor.com/view/omegalul-omega-lul-gif-9902854')
+
+@client.command()
+async def skyperoast(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=sSPIMgtcQnU')
+
+@client.command()
+async def thefatrat(ctx):
+    thefatrat_songs = ['https://www.youtube.com/watch?v=p-LOXXGGeAc',
+                       'https://www.youtube.com/watch?v=Gc3tqnhmf5U',
+                       'https://www.youtube.com/watch?v=kL8CyVqzmkc',
+                       'https://www.youtube.com/watch?v=YqrxIimmiqs',
+                       'https://www.youtube.com/watch?v=B7xai5u_tnk',
+                       'https://www.youtube.com/watch?v=KR-eV7fHNbM',
+                       'https://www.youtube.com/watch?v=3fxq7kqyWO8',
+                       'https://www.youtube.com/watch?v=jqkPqfOFmbY',
+                       'https://www.youtube.com/watch?v=n8X9_MgEdCg',
+                       'https://www.youtube.com/watch?v=3aLyiI2odhU']
+    await ctx.send(f'Here is one of my favorite TheFatRat songs! {random.choice(thefatrat_songs)}')
+
+
+@client.command()
+async def timebomb(ctx):
     await ctx.send(f'https://discord.gg/DB3eCX8RRR')
 
 @client.command()
@@ -33,13 +66,28 @@ async def moonfrost(ctx):
 async def on_member_join(member):
     print(f'{member} has joined a server.')
 
+@client.command()
+async def vibincat(ctx):
+    catdobevibin = [
+        'https://www.youtube.com/watch?v=NUYvbT6vTPs',
+        'https://www.youtube.com/watch?v=eZTS4cL4Euo',
+        'https://www.youtube.com/watch?v=bFzrB-lo9k8',
+        'https://www.youtube.com/watch?v=lcCZbPyfWPM'
+    ]
+    await ctx.send(f'Here is a vibing cat video! {random.choice(catdobevibin)}')
+
+@client.command()
+async def woooo(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=z-JRdRXiNv4 WOOOOOOO')
+
+
 @client.event
 async def on_member_remove(member):
     print(f'{member} has left a server.')
 
 @client.command()
 async def ping(ctx):
-    await ctx.send(f'Ya pingg is {round(client.latency * 1000)} milliseconds!')
+    await ctx.send(f'Ya pingg is {round(client.latency * 1000)} milliseconds! Why did I make this command?')
 
 @client.command()
 async def eball(ctx, *, question):
@@ -65,7 +113,7 @@ async def eball(ctx, *, question):
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
 @client.command()
-async def peepo(ctx):
+async def memepeepo(ctx):
     gifs = ['https://tenor.com/view/peepo-arrive-peepo-pepe-the-frog-happy-gif-16095288',
             'https://tenor.com/view/pepe-pepe-the-frog-clapping-applause-gif-17906949',
             'https://tenor.com/view/peepo-smash-pepe-pepe-the-frog-punch-gif-16142453',
@@ -78,11 +126,42 @@ async def peepo(ctx):
     await ctx.send(f'Here is your peepo gif! {random.choice(gifs)}')
 
 @client.command()
-async def poggers(ctx):
-    gifs = ['https://tenor.com/view/pogchamp-pog-pogey-poggers-twitch-gif-14340727',
-            'https://tenor.com/view/pogchamp-shocked-intensified-gif-17946611',
-            'https://tenor.com/view/vsauce-vsauce-pog-poggers-vsauce-poggers-pog-gif-1843037P']
-    await ctx.send(f'Here is your pog/poggers/pogchamp gif! {random.choice(gifs)}')
+async def memerobux(ctx):
+    await ctx.send(f'https://tenor.com/view/roblox-robux-robuxgratis-wentis-gamer-yootube-gif-18776887 Here is your Robux you filthy rich kid')
+
+@client.command()
+async def devrewards(ctx):
+    await ctx.send(f'The developer, BCC QuackerDeezlesYT, has 100917 Microsoft Rewards Points and is on a 116 daily streak.')
+
+@client.command()
+async def memeyoutube(ctx):
+    memes = ['https://www.youtube.com/watch?v=BPO4Gp2tHWw',
+             'https://www.youtube.com/watch?v=XqZsoesa55w',
+             'https://www.youtube.com/watch?v=j9V78UbdzWI',
+             'https://www.youtube.com/watch?v=mKue4WuagL8',
+             'https://www.youtube.com/watch?v=g9TNY75jhcs&t=3s',
+             'https://www.youtube.com/watch?v=tPEQUfszEkk&has_verified=1',
+             'https://www.youtube.com/watch?v=GnrwM7vFn_U',
+             'https://www.youtube.com/watch?v=BJ0xBCwkg3E&t=40s',
+             'https://www.youtube.com/watch?v=E9s1ltPGQOo'
+             ]
+    await ctx.send(f'Here is your randomized YouTube meme video! {random.choice(memes)}')
+
+
+@client.command()
+async def fortnitemontage(ctx):
+    montages = ['https://www.youtube.com/watch?v=D7SDYCTq444&t=308s',
+                'https://www.youtube.com/watch?v=2OSEQx6j74U',
+                'https://www.youtube.com/watch?v=L8tCx1YpqWo',
+                'https://www.youtube.com/watch?v=BE9OlU4IWlc',
+                'https://www.youtube.com/watch?v=dB8OVwna09I',
+                'https://www.youtube.com/watch?v=QLKDXrdm5l8',
+                'https://www.youtube.com/watch?v=cj0LUew0t4Y',
+                'https://www.youtube.com/watch?v=xZFy4GsCT5M&t=32s',
+                'https://www.youtube.com/watch?v=0qaVwIi_gvk',
+                'https://www.youtube.com/watch?v=GKt-CfZwA70&t=9s'
+                ]
+    await ctx.send(f'Here is a random Fortnite montage! {random.choice(montages)}')
 
 @client.command()
 async def elem(ctx, *, symbol):
@@ -115,59 +194,74 @@ async def ducc(ctx):
     await ctx.send(f'Hey there fella, I am Quacc Ducc, a bot that does what rarely other bots do. I am currently adding more things to my bot, such as adding the periodic table, and more. I suppose you want a duck emoji, so here it is! :duck:')
 
 @client.command()
-async def youtube(ctx):
+async def randomemoji(ctx):
+    emojis = [':japanese_ogre:',
+              ':space_invader:',
+              ':shit:',
+              ':tooth:',
+              ':woman_detective:',
+              ':mermaid:',
+              ':dog:',
+              ':monkey:',
+              ':bagel:',
+              ':archery:',
+              ':musical_keyboard',
+              ':video_game:',
+              ':ferris_wheel:',
+              ':sponge:',
+              ':cool:',
+              ':bagel:'
+              ':archery:',
+              ':musical_keyboard',
+              ':video_game:',
+              ':ferris_wheel:',
+              ':sponge:',
+              ':cool:',
+    ]
+    await ctx.send(f'Here is your random emoji! {random.choice(emojis)}')
+
+@client.command()
+async def socyoutube(ctx):
     await ctx.send(f'https://www.youtube.com/channel/UC6PKOburRMFSjwTCQcL4wbQ?view_as=subscriber')
 
 @client.command()
-async def website(ctx):
+async def socwebsite(ctx):
     await ctx.send(f'The programmers website is here: https://talentkrazy.wixsite.com/website | Will make a bot website soon!')
 
 @client.command()
-async def twitch(ctx):
+async def soctwitch(ctx):
     await ctx.send(f'https://www.twitch.tv/quackerdeezles')
 
 @client.command()
-async def xoroll(ctx):
-    await ctx.send(f'https://www.youtube.com/watch?v=MbuP33ugiPU')
+async def gdmix1(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=MbuP33ugiPU | https://www.youtube.com/watch?v=a00f_tbdi8I | https://www.youtube.com/watch?v=nMbx8EurE0g | https://www.youtube.com/watch?v=nLRo25fBxGc | https://www.youtube.com/watch?v=eyjjgHU21cg')
 
 @client.command()
-async def hi(ctx):
-    await ctx.send(f'https://www.youtube.com/watch?v=a00f_tbdi8I')
+async def gdmix2(ctx):
+    await ctx.send(f'https://www.youtube.com/watch?v=GiH31jvj7Lo | https://www.youtube.com/watch?v=PbX5zPTfPXU | https://www.youtube.com/watch?v=OEg0ASwOpOo | https://www.youtube.com/watch?v=1fu3Q1giB94 | https://www.youtube.com/watch?v=3aLyiI2odhU')
 
 @client.command()
-async def sans(ctx):
+async def musicsans(ctx):
     await ctx.send(f'https://www.youtube.com/watch?v=wDgQdr8ZkTw Megalovania, the #1 undertale song (dev opinion)')
 
 @client.command()
-async def e(ctx):
+async def musicrushe(ctx):
     await ctx.send(f'https://www.youtube.com/watch?v=Qskm9MTz2V4 E')
 
 @client.command()
-async def overused(ctx):
-    await ctx.send(f'https://www.youtube.com/watch?v=nMbx8EurE0g Remember this? Then ur OG.')
-
-@client.command()
 async def mirotam(ctx):
-    await ctx.send(f'Thank you very much Mirotam for letting me put this bot in this server! | https://discord.gg/gNKEYTg')
+    await ctx.sen(f'Thank you very much Mirotam for letting me put this bot in this server! | https://discord.gg/gNKEYTg')
 
 @client.command()
 async def stillpesta(ctx):
     await ctx.send(f'https://tenor.com/view/npesta-stillpesta-gif-18113412 FOR THE KENOS')
 
 @client.command()
-async def pingg(ctx):
-    await ctx.send(f'https://www.youtube.com/watch?v=RKW6rjnYEkc&list=RDQHVREB6fdvI&index=12 Read the subtitles :)')
-
-@client.command()
-async def leaderboard(ctx):
+async def gdleaderboard(ctx):
     await ctx.send(f'1st Place: c07 - 43 Pts (13)\n2nd Place: Saz - 35 Pts (33)\n3rd Place: Soggy Potato - 33 Pts (11)\n4th Place: T I M E B O M B - 33 Pts\n5th Place: yujiBR - 8 Pts\n6th Place: DynaXiasT - 8 Pts')
 
 @client.command()
-async def botserv(ctx):
+async def socbotserv(ctx):
     await ctx.send(f'It would be much appreciated if you check out this server. Right now I am building on it, so it might look dead. But, be sure to come back later and hop in if you need help or to have fun! https://discord.gg/w6ETpwP7kB')
 
-
-
-
-
-client.run('key')
+client.run('NzY3MTkwNzIxNTM0MzYxNjMx.X4uUCQ.Ckk2EqHvxS5L0Y1a8Lhw5S1NZMg')
