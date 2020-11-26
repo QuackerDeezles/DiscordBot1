@@ -6,7 +6,7 @@ client = commands.Bot(command_prefix = ';')
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game("DM BCC QuackerDeezlesYT#6392 if you want this bot in your server!"))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game("DM BCC QuackerDeezlesYT#0001 if you want me in your server!"))
     print('Bot is ready.')
 
 @client.command()
@@ -21,6 +21,11 @@ async def mineparody(ctx):
                                  'https://www.youtube.com/watch?v=Gl6ekgobG2k',
                                  'https://www.youtube.com/watch?v=OIWK3BD5zT8']
     await ctx.send(f'Here is your random Minecraft parody! {random.choice(random_minecraft_parodies)}')
+
+@client.command()
+async def magginoodles(ctx):
+    await ctx.send(f'https://tenor.com/view/1983-maggi-noodles-halal-malaysia-cooking-gif-15639489')
+
 
 @client.command()
 async def deletus(ctx, amount=0):
