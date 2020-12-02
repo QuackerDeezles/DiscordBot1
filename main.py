@@ -58,15 +58,6 @@ async def thefatrat(ctx):
                        'https://www.youtube.com/watch?v=3aLyiI2odhU']
     await ctx.send(f'Here is one of my favorite TheFatRat songs! {random.choice(thefatrat_songs)}')
 
-
-@client.command()
-async def timebomb(ctx):
-    await ctx.send(f'https://discord.gg/DB3eCX8RRR')
-
-@client.command()
-async def moonfrost(ctx):
-    await ctx.send(f'https://twitch.tv/moonfrostelemental | https://www.youtube.com/channel/UCxW9ilAhTGuhLvzIhgmSvyw?view_as=subscriber | https://discord.gg/3BkEHKq')
-
 @client.event
 async def on_member_join(member):
     print(f'{member} has joined a server.')
@@ -133,10 +124,6 @@ async def memepeepo(ctx):
 @client.command()
 async def memerobux(ctx):
     await ctx.send(f'https://tenor.com/view/roblox-robux-robuxgratis-wentis-gamer-yootube-gif-18776887 Here is your Robux you filthy rich kid')
-
-@client.command()
-async def devrewards(ctx):
-    await ctx.send(f'The developer, BCC QuackerDeezlesYT, has 100917 Microsoft Rewards Points and is on a 116 daily streak.')
 
 @client.command()
 async def memeyoutube(ctx):
@@ -238,14 +225,6 @@ async def soctwitch(ctx):
     await ctx.send(f'https://www.twitch.tv/quackerdeezles')
 
 @client.command()
-async def gdmix1(ctx):
-    await ctx.send(f'https://www.youtube.com/watch?v=MbuP33ugiPU | https://www.youtube.com/watch?v=a00f_tbdi8I | https://www.youtube.com/watch?v=nMbx8EurE0g | https://www.youtube.com/watch?v=nLRo25fBxGc | https://www.youtube.com/watch?v=eyjjgHU21cg')
-
-@client.command()
-async def gdmix2(ctx):
-    await ctx.send(f'https://www.youtube.com/watch?v=GiH31jvj7Lo | https://www.youtube.com/watch?v=PbX5zPTfPXU | https://www.youtube.com/watch?v=OEg0ASwOpOo | https://www.youtube.com/watch?v=1fu3Q1giB94 | https://www.youtube.com/watch?v=3aLyiI2odhU')
-
-@client.command()
 async def musicsans(ctx):
     await ctx.send(f'https://www.youtube.com/watch?v=wDgQdr8ZkTw Megalovania, the #1 undertale song (dev opinion)')
 
@@ -254,19 +233,7 @@ async def musicrushe(ctx):
     await ctx.send(f'https://www.youtube.com/watch?v=Qskm9MTz2V4 E')
 
 @client.command()
-async def mirotam(ctx):
-    await ctx.sen(f'Thank you very much Mirotam for letting me put this bot in this server! | https://discord.gg/gNKEYTg')
-
-@client.command()
 async def stillpesta(ctx):
     await ctx.send(f'https://tenor.com/view/npesta-stillpesta-gif-18113412 FOR THE KENOS')
-
-@client.command()
-async def gdleaderboard(ctx):
-    await ctx.send(f'1st Place: c07 - 43 Pts (13)\n2nd Place: Saz - 35 Pts (33)\n3rd Place: Soggy Potato - 33 Pts (11)\n4th Place: T I M E B O M B - 33 Pts\n5th Place: yujiBR - 8 Pts\n6th Place: DynaXiasT - 8 Pts')
-
-@client.command()
-async def socbotserv(ctx):
-    await ctx.send(f'It would be much appreciated if you check out this server. Right now I am building on it, so it might look dead. But, be sure to come back later and hop in if you need help or to have fun! https://discord.gg/w6ETpwP7kB')
 
 client.run('key')
