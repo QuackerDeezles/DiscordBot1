@@ -239,4 +239,4 @@ async def musicrushe(ctx):
 async def stillpesta(ctx):
     await ctx.send(f'https://tenor.com/view/npesta-stillpesta-gif-18113412 FOR THE KENOS')
 
-client.run('NzY3MTkwNzIxNTM0MzYxNjMx.X4uUCQ.745U52MZThnSQtRilYt1eJBbiC0')
+client.run('key')
