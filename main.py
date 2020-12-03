@@ -4,11 +4,6 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix = ';')
 
-@client.event
-async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game("DM BCC QuackerDeezlesYT#0001 if you want me in your server!"))
-    print('Bot is ready.')
-
 @client.command()
 async def creeper(ctx):
     await ctx.send(f'https://www.youtube.com/watch?v=cPJUBQd-PNM um u asked for it here it is')
@@ -180,10 +175,18 @@ async def elem(ctx, *, symbol):
     }
     await ctx.send(f'Symbol: {symbol}\nInformation: {elements[symbol]}')
 
+@client.event
+async def on_ready():
+    await client.change_presence(status=discord.Status.online, activity=discord.Game(f'DM BCC QuackerDeezlesYT#6392 to invite bot, featured in {len(client.guilds)} servers!'))
+    print("ready!")
 
 @client.command()
 async def ducc(ctx):
     await ctx.send(f'Hey there fella, I am Quacc Ducc, a bot that does what rarely other bots do. I am currently adding more things to my bot, such as adding the periodic table, and more. I suppose you want a duck emoji, so here it is! :duck:')
+
+@client.command()
+async def inviteme(ctx):
+    await ctx.send(f'Thank you very much! It would be very appreciative if you would invite me to your server, it really means a lot :slight_smile: Here is the link: https://discord.com/oauth2/authorize?client_id=767190721534361631&permissions=8&scope=bot Thanks!')
 
 @client.command()
 async def randomemoji(ctx):
@@ -236,4 +239,4 @@ async def musicrushe(ctx):
 async def stillpesta(ctx):
     await ctx.send(f'https://tenor.com/view/npesta-stillpesta-gif-18113412 FOR THE KENOS')
 
-client.run('key')
+client.run('NzY3MTkwNzIxNTM0MzYxNjMx.X4uUCQ.745U52MZThnSQtRilYt1eJBbiC0')
