@@ -1,5 +1,7 @@
 import discord
 import random
+import keep_alive
+import os
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = ';')
@@ -10,11 +12,7 @@ async def creeper(ctx):
 
 @client.command()
 async def mineparody(ctx):
-    random_minecraft_parodies = ['https://www.youtube.com/watch?v=cPJUBQd-PNM',
-                                 'https://www.youtube.com/watch?v=5nfv_iEeC8Y',
-                                 'https://www.youtube.com/watch?v=pcWWg0T1RSQ',
-                                 'https://www.youtube.com/watch?v=Gl6ekgobG2k',
-                                 'https://www.youtube.com/watch?v=OIWK3BD5zT8']
+    random_minecraft_parodies = ['https://www.youtube.com/watch?v=cPJUBQd-PNM','https://www.youtube.com/watch?v=5nfv_iEeC8Y','https://www.youtube.com/watch?v=pcWWg0T1RSQ','https://www.youtube.com/watch?v=Gl6ekgobG2k','https://www.youtube.com/watch?v=OIWK3BD5zT8']
     await ctx.send(f'Here is your random Minecraft parody! {random.choice(random_minecraft_parodies)}')
 
 @client.command()
@@ -41,16 +39,7 @@ async def skyperoast(ctx):
 
 @client.command()
 async def thefatrat(ctx):
-    thefatrat_songs = ['https://www.youtube.com/watch?v=p-LOXXGGeAc',
-                       'https://www.youtube.com/watch?v=Gc3tqnhmf5U',
-                       'https://www.youtube.com/watch?v=kL8CyVqzmkc',
-                       'https://www.youtube.com/watch?v=YqrxIimmiqs',
-                       'https://www.youtube.com/watch?v=B7xai5u_tnk',
-                       'https://www.youtube.com/watch?v=KR-eV7fHNbM',
-                       'https://www.youtube.com/watch?v=3fxq7kqyWO8',
-                       'https://www.youtube.com/watch?v=jqkPqfOFmbY',
-                       'https://www.youtube.com/watch?v=n8X9_MgEdCg',
-                       'https://www.youtube.com/watch?v=3aLyiI2odhU']
+    thefatrat_songs = ['https://www.youtube.com/watch?v=p-LOXXGGeAc','https://www.youtube.com/watch?v=Gc3tqnhmf5U','https://www.youtube.com/watch?v=kL8CyVqzmkc','https://www.youtube.com/watch?v=YqrxIimmiqs','https://www.youtube.com/watch?v=B7xai5u_tnk','https://www.youtube.com/watch?v=KR-eV7fHNbM','https://www.youtube.com/watch?v=3fxq7kqyWO8','https://www.youtube.com/watch?v=jqkPqfOFmbY','https://www.youtube.com/watch?v=n8X9_MgEdCg','https://www.youtube.com/watch?v=3aLyiI2odhU']
     await ctx.send(f'Here is one of my favorite TheFatRat songs! {random.choice(thefatrat_songs)}')
 
 @client.event
@@ -59,12 +48,7 @@ async def on_member_join(member):
 
 @client.command()
 async def vibincat(ctx):
-    catdobevibin = [
-        'https://www.youtube.com/watch?v=NUYvbT6vTPs',
-        'https://www.youtube.com/watch?v=eZTS4cL4Euo',
-        'https://www.youtube.com/watch?v=bFzrB-lo9k8',
-        'https://www.youtube.com/watch?v=lcCZbPyfWPM'
-    ]
+    catdobevibin = ['https://www.youtube.com/watch?v=NUYvbT6vTPs','https://www.youtube.com/watch?v=eZTS4cL4Euo','https://www.youtube.com/watch?v=bFzrB-lo9k8','https://www.youtube.com/watch?v=lcCZbPyfWPM']
     await ctx.send(f'Here is a vibing cat video! {random.choice(catdobevibin)}')
 
 @client.command()
@@ -177,7 +161,7 @@ async def elem(ctx, *, symbol):
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game(f'DM BCC QuackerDeezlesYT#6392 to invite bot, featured in {len(client.guilds)} servers!'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game(f'DM BCC QuackerDeezlesYT#6392 to invite bot, featured in {len(client.guilds)} servers!'))
     print("ready!")
 
 @client.command()
@@ -239,4 +223,5 @@ async def musicrushe(ctx):
 async def stillpesta(ctx):
     await ctx.send(f'https://tenor.com/view/npesta-stillpesta-gif-18113412 FOR THE KENOS')
 
+keep_alive.keep_alive()
 client.run('key')
